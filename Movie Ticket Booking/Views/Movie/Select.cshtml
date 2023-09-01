@@ -1,0 +1,48 @@
+﻿@model BusinessObject.SeatsToBeRendered
+
+@{
+    ViewBag.Title = "Select";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br>
+@using (Html.BeginForm())
+ {
+
+        <h3>Select Date And Time</h3>
+        <br>
+
+        @Html.HiddenFor(model => model.Movieid, new { @Value = Session["Movieid"], @class = "form-control" })
+        @Html.HiddenFor(model => model.Memberid, new { @Value = Session["Memberid"], @class = "form-control" })
+        <div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Screen, new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.Screen, new List<SelectListItem>
+               { new SelectListItem{Text="Screen 1", Value="Screen 1"}, new SelectListItem{Text="Screen 2", Value="Screen 2"},
+                 new SelectListItem{Text="Screen 3", Value="Screen 3"}, new SelectListItem { Text = "Screen 4 ", Value = "Screen 4" }}, " Select Screen", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Screen, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Moviedate, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Moviedate, new { type = "date", @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Moviedate, "", new { @class = "text-danger" })
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movietime, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Movietime, new List<SelectListItem>
+           { new SelectListItem{Text="10:00 AM", Value="10:00"},new SelectListItem{Text="01:00 PM", Value="01:00"},new SelectListItem{Text="03:00 PM", Value="03:00"},
+             new SelectListItem{Text="07:00 PM", Value="07:00"}}, " Select Time", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Moviedate, "", new { @class = "text-danger" })
+        </div>
+        <br>
+        <div class="form-group">
+
+            <input type="submit" value="Select Seat" class=" justify-content-center btn btn-sm btn-primary" />
+
+        </div>
+
+
+
+    }

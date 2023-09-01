@@ -1,0 +1,14 @@
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\DataAccess.dll.config
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\DataAccess.dll
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\DataAccess.pdb
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\BusinessObject.dll
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\EntityFramework.dll
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\BusinessObject.pdb
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\EntityFramework.xml
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\obj\Debug\DataAccess.dll
+D:\MYPROJECT\Movie Ticket Booking\DataAccess\obj\Debug\DataAccess.pdb

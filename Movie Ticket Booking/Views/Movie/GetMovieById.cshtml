@@ -1,0 +1,51 @@
+﻿@model BusinessObject.MovieDetails
+
+@{
+    ViewBag.Title = "GetMovieById";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br>
+<h3>Movie Details</h3>
+<div class="container my-5">
+    <div class="row">
+
+        <div class="col-md-6">
+            <img src="@Html.DisplayFor(model => model.ImageUrl)" width="300" height="300" class="img-fluid details-img" />
+
+        </div>
+        <div class="col-md-6">
+            <b><span>Movie Name</span></b>
+            <h5>  @Html.DisplayFor(model => model.Moviename)</h5>
+            <b><span>Genre</span></b>
+            <h5>  @Html.DisplayFor(model => model.Genre)</h5>
+            <b><span>Language</span></b>
+            <h5>  @Html.DisplayFor(model => model.Language)</h5>
+            <b><span>Release Date</span></b>
+            <h5>  @Html.DisplayFor(model => model.Releasedate)</h5>
+            <b> <span>Price</span></b>
+            <h5>  @Html.DisplayFor(model => model.Price)</h5>
+
+            <b><span>Description</span></b>
+            <br>
+            <p class="dummy-description mb-4">
+                <h5> @Html.DisplayFor(model => model.Description)</h5>
+            </p>
+            <div class="justify-content-center">
+
+                <input type="button" class="btn btn-sm btn-primary Select" value="Select Date And Time" />
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    $(".Select").click(function () {
+
+        window.location.href = 'Select';
+    });
+</script>

@@ -1,0 +1,60 @@
+﻿@model List<BusinessObject.TicketBookingObjectReturn_Result>
+
+@{
+    ViewBag.Title = "Ticket";
+}
+
+<div class="row">
+@foreach (BusinessObject.TicketBookingObjectReturn_Result data in Model.OrderByDescending(x => x.Paymentid))
+
+{
+    <div class="contenido">
+        <div class="ticket">
+            <div class="details">
+                <div class="tinfo">
+                    Movie name
+                </div>
+                <div class="tdata name">
+                    @data.Moviename
+                </div>
+                <div class="tinfo">
+                    Seat No
+                </div>
+                <div class="tdata">
+                    @data.SeatNo
+                </div>
+                <div class="tinfo">
+                    Screen
+                </div>
+                <div class="tdata">
+                    @data.Screen
+                </div>
+                <div class="tinfo">
+                    Movie Date
+                </div>
+                <div class="tdata">
+                    @data.Moviedate
+                </div>
+                
+                
+                        <div class="tinfo">
+                            Movie Time
+                        </div>
+                        <div class="tdata">
+                            @data.Movietime
+                        </div>
+                        <div class="tinfo">
+                            Total
+                        </div>
+                        <div class="tdata">
+                            @data.Total
+                        </div>
+                @Html.ActionLink("Cancel", "Cancel", new { Paymentid = data.Paymentid })
+
+            </div>
+        </div>
+    </div>
+
+
+}
+    </div>

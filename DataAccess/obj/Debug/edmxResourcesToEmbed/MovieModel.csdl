@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoviebookingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AddMovy">
+    <Key>
+      <PropertyRef Name="Movieid" />
+    </Key>
+    <Property Name="Movieid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Memberid" Type="Int32" Nullable="false" />
+    <Property Name="Moviename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Movieimage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Releasedate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Createdon" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Updatedon" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Membership" Relationship="Self.FK_AddMovies_Memberships" FromRole="AddMovies" ToRole="Memberships" />
+    <NavigationProperty Name="Seatbookings" Relationship="Self.FK_Seatbooking_AddMovies" FromRole="AddMovies" ToRole="Seatbooking" />
+  </EntityType>
+  <EntityType Name="Contactdetail">
+    <Key>
+      <PropertyRef Name="Contactid" />
+    </Key>
+    <Property Name="Contactid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Memberid" Type="Int32" Nullable="false" />
+    <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dateofbirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Createdon" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Updatedon" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Updatedy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Membership" Relationship="Self.FK_Contactdetails_Memberships" FromRole="Contactdetails" ToRole="Memberships" />
+  </EntityType>
+  <EntityType Name="Membership">
+    <Key>
+      <PropertyRef Name="Memberid" />
+    </Key>
+    <Property Name="Memberid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Createdon" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Updatedon" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="AddMovies" Relationship="Self.FK_AddMovies_Memberships" FromRole="Memberships" ToRole="AddMovies" />
+    <NavigationProperty Name="Contactdetails" Relationship="Self.FK_Contactdetails_Memberships" FromRole="Memberships" ToRole="Contactdetails" />
+    <NavigationProperty Name="Seatbookings" Relationship="Self.FK_Seatbooking_Memberships" FromRole="Memberships" ToRole="Seatbooking" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="Paymentid" />
+    </Key>
+    <Property Name="Paymentid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Total" Type="Int32" Nullable="false" />
+    <Property Name="Cardnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nameoncard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Expirydate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Cvv" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Seatbookings" Relationship="Self.FK_Seatbooking_Payments" FromRole="Payments" ToRole="Seatbooking" />
+  </EntityType>
+  <EntityType Name="Seatbooking">
+    <Key>
+      <PropertyRef Name="Bookid" />
+    </Key>
+    <Property Name="Bookid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Movieid" Type="Int32" Nullable="false" />
+    <Property Name="Memberid" Type="Int32" Nullable="false" />
+    <Property Name="Screen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Moviedate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Movietime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Seatid" Type="Int32" Nullable="false" />
+    <Property Name="Ticketprice" Type="Int32" Nullable="false" />
+    <Property Name="Paymentid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AddMovy" Relationship="Self.FK_Seatbooking_AddMovies" FromRole="Seatbooking" ToRole="AddMovies" />
+    <NavigationProperty Name="Membership" Relationship="Self.FK_Seatbooking_Memberships" FromRole="Seatbooking" ToRole="Memberships" />
+    <NavigationProperty Name="Payment" Relationship="Self.FK_Seatbooking_Payments" FromRole="Seatbooking" ToRole="Payments" />
+  </EntityType>
+  <EntityType Name="Seat">
+    <Key>
+      <PropertyRef Name="Seatid" />
+    </Key>
+    <Property Name="Seatid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seatno" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AddMovies_Memberships">
+    <End Role="Memberships" Type="Self.Membership" Multiplicity="1" />
+    <End Role="AddMovies" Type="Self.AddMovy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Memberships">
+        <PropertyRef Name="Memberid" />
+      </Principal>
+      <Dependent Role="AddMovies">
+        <PropertyRef Name="Memberid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seatbooking_AddMovies">
+    <End Role="AddMovies" Type="Self.AddMovy" Multiplicity="1" />
+    <End Role="Seatbooking" Type="Self.Seatbooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddMovies">
+        <PropertyRef Name="Movieid" />
+      </Principal>
+      <Dependent Role="Seatbooking">
+        <PropertyRef Name="Movieid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contactdetails_Memberships">
+    <End Role="Memberships" Type="Self.Membership" Multiplicity="1" />
+    <End Role="Contactdetails" Type="Self.Contactdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Memberships">
+        <PropertyRef Name="Memberid" />
+      </Principal>
+      <Dependent Role="Contactdetails">
+        <PropertyRef Name="Memberid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seatbooking_Memberships">
+    <End Role="Memberships" Type="Self.Membership" Multiplicity="1" />
+    <End Role="Seatbooking" Type="Self.Seatbooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Memberships">
+        <PropertyRef Name="Memberid" />
+      </Principal>
+      <Dependent Role="Seatbooking">
+        <PropertyRef Name="Memberid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seatbooking_Payments">
+    <End Role="Payments" Type="Self.Payment" Multiplicity="1" />
+    <End Role="Seatbooking" Type="Self.Seatbooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payments">
+        <PropertyRef Name="Paymentid" />
+      </Principal>
+      <Dependent Role="Seatbooking">
+        <PropertyRef Name="Paymentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MoviebookingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AddMovies" EntityType="Self.AddMovy" />
+    <EntitySet Name="Contactdetails" EntityType="Self.Contactdetail" />
+    <EntitySet Name="Memberships" EntityType="Self.Membership" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="Seatbookings" EntityType="Self.Seatbooking" />
+    <EntitySet Name="Seats" EntityType="Self.Seat" />
+    <AssociationSet Name="FK_AddMovies_Memberships" Association="Self.FK_AddMovies_Memberships">
+      <End Role="Memberships" EntitySet="Memberships" />
+      <End Role="AddMovies" EntitySet="AddMovies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seatbooking_AddMovies" Association="Self.FK_Seatbooking_AddMovies">
+      <End Role="AddMovies" EntitySet="AddMovies" />
+      <End Role="Seatbooking" EntitySet="Seatbookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contactdetails_Memberships" Association="Self.FK_Contactdetails_Memberships">
+      <End Role="Memberships" EntitySet="Memberships" />
+      <End Role="Contactdetails" EntitySet="Contactdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seatbooking_Memberships" Association="Self.FK_Seatbooking_Memberships">
+      <End Role="Memberships" EntitySet="Memberships" />
+      <End Role="Seatbooking" EntitySet="Seatbookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seatbooking_Payments" Association="Self.FK_Seatbooking_Payments">
+      <End Role="Payments" EntitySet="Payments" />
+      <End Role="Seatbooking" EntitySet="Seatbookings" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

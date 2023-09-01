@@ -1,0 +1,72 @@
+﻿@model IEnumerable<BusinessObject.SeatBookingObject>
+
+@{
+    ViewBag.Title = "BookingList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>BookingList</h2>
+
+
+<table class="table">
+    <tr>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Movieid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memberid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Screen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moviedate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movietime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seatid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ticketprice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Paymentid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Movieid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memberid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Screen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moviedate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movietime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seatid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ticketprice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paymentid)
+        </td>
+
+    </tr>
+}
+
+</table>

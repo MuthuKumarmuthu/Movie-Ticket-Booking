@@ -1,0 +1,50 @@
+﻿@model BusinessObject.Loginobject
+
+@{
+    ViewBag.Title = "Login";
+}
+<br>
+<h3>SignIn</h3>
+<div class="for">
+
+    @using (Html.BeginForm())
+    {
+        <div class="container justify-content-center">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Username, new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+
+            </div>
+
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+            </div>
+            <br>
+            <div class="form-group">
+
+                <input type="submit" value="SignIn" class="btn btn-sm btn-primary " />
+
+            </div>
+            <div class="form-group">
+
+                @ViewBag.Notification
+
+            </div>
+
+            <br>
+            <div class="form-group">
+                <p>Create a account @Html.ActionLink("SignUp", "Membership")</p>
+            </div>
+
+        </div>
+
+    }
+
+</div>
+

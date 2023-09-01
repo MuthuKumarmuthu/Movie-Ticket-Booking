@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Movie Ticket Booking </title>
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.rtl.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.rtl.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-utilities.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-utilities.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-utilities.rtl.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-utilities.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="~/Scripts/Jquery.js"></script>
+    <script src="~/Scripts/SweetAlert.js"></script>
+    <link href="~/Content/style-home.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/Index.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/ticket.css" rel="stylesheet" />
+    <link href="~/Content/detail.css" rel="stylesheet" />
+    <link href="~/Content/Seats.css" rel="stylesheet" />
+   
+</head>
+
+<body>
+
+    <div class="header-fixed">
+        <div class="header-limiter">
+            <h1>@Html.ActionLink("MOVIEBOOKING", "Index", "Movie")</h1>
+           
+            <nav>
+                @Html.ActionLink("Home", "index", "Movie")
+                @Html.ActionLink("Movies", "index", "Movie")
+                @Html.ActionLink("About", "About", "Movie")
+
+                @if (Session["Username"] != null)
+                {
+                    var name = Session["Username"];
+                    @Html.ActionLink(name.ToString(), "Ticket", "Book");
+            
+
+                }
+                else
+                {
+
+                    @Html.ActionLink("Login", "Login", "Login")
+                }
+            </nav>
+            
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+   
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Movie Bookig</h4>
+              
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Access</h4>
+                    <ul>
+                        <li>@Html.ActionLink("MovieBooking", "Index", "Movie")</li>
+                        <li>@Html.ActionLink("Movie", "Index", "Movie")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Login")</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href="#">Email:Movies@gmail.com</a></li>
+                        <li><a href="#">Phone Number: 8807201223</a></li>
+          
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿@model BusinessObject.AdminObject
+@{
+    ViewBag.Title = "DashBoard";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<link href="~/Content/about.css" rel="stylesheet" />
+<br>
+@using (Html.BeginForm())
+{
+    <center>
+        <table id="datatable" border="0">
+            <tr>
+                <td width="100%">
+             
+                        <div class="statistic Signupuser">
+                            <div class="title">User</div>
+                            <div class="numbers">@ViewBag.User</div>
+                        </div>
+            
+                    
+                        <div class="statistic MovieList">
+                            <div class="title">Movie</div>
+                            <div class="numbers">@ViewBag.Movie</div>
+                        </div>
+                  
+                        <div class="statistic Booking">
+                            <div class="title">Booking</div>
+                            <div class="numbers">@ViewBag.Booking</div>
+                        </div>
+               
+
+                        <div class="statistic Payment">
+                            <div class="title">Payment</div>
+                            <div class="numbers">@ViewBag.Payment</div>
+                        </div>
+                  
+                </td>
+            </tr>
+        </table>
+    </center>
+
+
+}
+<script>
+
+    $(".Signupuser").click(function () {
+
+        window.location.href = 'SignupUser';
+    });
+    $(".MovieList").click(function () {
+
+        window.location.href = 'MovieList';
+    });
+    $(".Booking").click(function () {
+
+        window.location.href = 'BookingList';
+    });
+    $(".Payment").click(function () {
+
+        window.location.href = 'PaymentList';
+    });
+
+</script>

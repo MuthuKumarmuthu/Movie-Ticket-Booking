@@ -1,0 +1,6 @@
+D:\MYPROJECT\Movie Ticket Booking\BusinessObject\bin\Debug\BusinessObject.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessObject\bin\Debug\BusinessObject.pdb
+D:\MYPROJECT\Movie Ticket Booking\BusinessObject\obj\Debug\BusinessObject.csproj.AssemblyReference.cache
+D:\MYPROJECT\Movie Ticket Booking\BusinessObject\obj\Debug\BusinessObject.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\Movie Ticket Booking\BusinessObject\obj\Debug\BusinessObject.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessObject\obj\Debug\BusinessObject.pdb

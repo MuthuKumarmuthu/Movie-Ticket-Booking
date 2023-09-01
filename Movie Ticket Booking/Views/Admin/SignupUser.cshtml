@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BusinessObject.SignupObject>
+
+@{
+    ViewBag.Title = "SignupUser";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Users</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Memberid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Createdon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Createdby)
+        </th>
+    
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memberid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Createdon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Createdby)
+        </td>
+
+
+    </tr>
+}
+
+</table>

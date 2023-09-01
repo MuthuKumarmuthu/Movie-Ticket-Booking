@@ -1,0 +1,17 @@
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\BusinessObject.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\DataAccess.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\EntityFramework.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\BusinessObject.pdb
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\DataAccess.dll.config
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\EntityFramework.xml
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\MYPROJECT\Movie Ticket Booking\BusinessLogic\obj\Debug\BusinessLogic.pdb

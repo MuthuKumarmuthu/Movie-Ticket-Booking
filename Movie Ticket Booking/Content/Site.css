@@ -1,0 +1,28 @@
+﻿/* Set padding to keep content from hitting the edges */
+body{
+    padding:0px;
+}
+body-content{
+    padding:0px;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.just {
+    border: 5px solid;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+

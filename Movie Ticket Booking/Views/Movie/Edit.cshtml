@@ -1,0 +1,97 @@
+﻿@model BusinessObject.MovieDetails
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@{
+    ViewBag.Title = "Edit";
+}
+<br>
+@using (Html.BeginForm("Edit", "Movie", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    
+    <h3>Edit Movies</h3>
+    <br>
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Movieid, new { @class = "form-control" })
+        @Html.HiddenFor(model => model.Memberid, new { @Value = Session["Memberid"], @class = "form-control" })
+        @Html.HiddenFor(model => model.Username, new { @Value = Session["Username"], @class = "form-control" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Moviename, new { @class = "control-label col-md-2" })
+
+            @Html.TextBoxFor(model => model.Moviename, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Moviename, "", new { @class = "text-danger" })
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.File, new { @class = "control-label " })
+
+            @Html.TextBoxFor(model => model.File, new { type = "file", @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Genre, new { @class = "control-label " })
+
+            @Html.TextBoxFor(model => model.Genre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Genre, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Language, new { @class = "control-label" })
+            @Html.DropDownListFor(model => model.Language, new List<SelectListItem>
+           { new SelectListItem{Text="Tamil", Value="Tamil"},new SelectListItem{Text="English", Value="English"}}, " Select Language", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Language, "", new { @class = "text-danger" })
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Releasedate, new { @class = "control-label" })
+
+            @Html.TextBoxFor(model => model.Releasedate, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Releasedate, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+
+            @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, new { @class = "control-label" })
+
+            @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.HiddenFor(model => model.Createdon, new { @class = "control-label" })
+
+            @Html.HiddenFor(model => model.Createdon, new {  @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Createdon, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.HiddenFor(model => model.Createdby, new { @class = "control-label" })
+
+            @Html.HiddenFor(model => model.Createdby, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Createdby, "", new { @class = "text-danger" })
+
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="submit" value="Save" class=" justify-content-center btn btn-sm btn-primary ">
+
+
+        </div>
+    </div>
+}
+
+

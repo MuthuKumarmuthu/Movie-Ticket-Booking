@@ -1,0 +1,64 @@
+﻿
+.seat {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+.taken {
+    background: #df0000;
+    color: #fff;
+}
+
+.selected {
+    background-color: #87ff96;
+    border: 2px solid;
+    border-color: greenyellow;
+}
+
+.selectedSeat {
+    background-color: #87ff96 !important;
+    border: 2px solid !important;
+    border-color: greenyellow !important;
+}
+
+/* (B) SEATS LAYOUT */
+#layout {
+    text-align: center;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* (C) LEGEND */
+#legend {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50px auto;
+}
+
+    #legend .txt {
+        display: flex;
+        align-items: center;
+    }
+
+/* (D) SAVE */
+/*#save {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 0;
+    color: #fff;
+    background: #00479f;
+}*/
+
+/* (X) DOES NOT MATTER */
+* {
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+}

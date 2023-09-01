@@ -1,0 +1,88 @@
+﻿@model BusinessObject.RegisterData
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+
+@using (Html.BeginForm())
+{
+
+    <h2>Signup</h2>
+
+    <div class="row align-items-center">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Firstname, new { @class = "control-label  " })
+                @Html.TextBoxFor(model => model.Firstname, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Firstname, "", new { @class = "text-danger" })
+            </div>
+             <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Lastname, new { @class = "control-label" })
+
+                @Html.TextBoxFor(model => model.Lastname, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Dateofbirth, new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.Dateofbirth, new { type = "date", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Dateofbirth, "", new { @class = "text-danger" })
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Phonenumber, new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.Phonenumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Phonenumber, "", new { @class = "text-danger" })
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label" })
+
+                @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, new { @class = "control-label" })
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Role, new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.Role, new List<SelectListItem>
+               { new SelectListItem{Text="Admin", Value="Admin"},
+                 new SelectListItem{Text="User", Value="User"}}, "Please select", new { @class = "form-control" })
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Signup" class=" justify-content-center btn btn-sm btn-primary ">
+
+            </div>
+            <br>
+            @ViewBag.Notification
+
+        </div>
+    </div>
+
+
+
+}
+
+
+

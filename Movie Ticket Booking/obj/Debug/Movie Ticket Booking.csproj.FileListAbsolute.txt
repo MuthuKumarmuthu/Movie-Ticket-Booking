@@ -1,0 +1,84 @@
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\Movie Ticket Booking.dll.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\Movie Ticket Booking.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\Movie Ticket Booking.pdb
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\csc.exe
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\csc.exe.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\csc.rsp
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\csi.exe
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\csi.exe.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\csi.rsp
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.Managed.Core.targets
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.AppContext.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Collections.Immutable.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Console.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Globalization.Calendars.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.IO.Compression.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.IO.FileSystem.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Net.Http.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Net.Sockets.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Reflection.Metadata.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.ValueTuple.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Xml.XmlDocument.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Xml.XPath.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\vbc.exe
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\vbc.exe.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\vbc.rsp
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\VBCSCompiler.exe
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\roslyn\VBCSCompiler.exe.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\BusinessLogic.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\BusinessObject.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\EntityFramework.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\EntityFramework.SqlServer.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\Microsoft.Web.Infrastructure.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Helpers.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Mvc.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Razor.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Webpages.Deployment.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Webpages.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Webpages.Razor.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\DataAccess.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\BusinessLogic.pdb
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\BusinessLogic.dll.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\BusinessObject.pdb
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\EntityFramework.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\EntityFramework.SqlServer.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Razor.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Webpages.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Webpages.Deployment.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Webpages.Razor.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Helpers.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\System.Web.Mvc.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\DataAccess.pdb
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\bin\DataAccess.dll.config
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\obj\Debug\Movie Ticket Booking.csproj.AssemblyReference.cache
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\obj\Debug\Movie Ticket Booking.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\obj\Debug\Movie Ticket Booking.csproj.CopyComplete
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\obj\Debug\Movie Ticket Booking.dll
+D:\MYPROJECT\Movie Ticket Booking\Movie Ticket Booking\obj\Debug\Movie Ticket Booking.pdb

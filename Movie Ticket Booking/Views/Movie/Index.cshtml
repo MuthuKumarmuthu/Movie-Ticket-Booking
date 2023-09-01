@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BusinessObject.MovieDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+
+
+    <div class="conatiner">
+        <div class="row " id="Rw-center">
+            @foreach (var item in Model.OrderByDescending(x => x.Movieid))
+                            {
+                                <div class="card">
+                                    <div class="card-image">
+
+                                        <a href=" @Url.Action("GetMovieById", new { Movieid = @item.Movieid })">
+
+                                            <img src="@item.ImageUrl" />
+                                        </a>
+
+                                    </div>
+                                    <div class="card-description">
+                                        <center> <h3>@item.Moviename</h3></center>
+
+                                    </div>
+                                </div>
+                            }
+        </div>
+    </div>
+
+}

@@ -1,0 +1,239 @@
+﻿@model BusinessObject.SeatObject
+
+
+<div id="seatSelect">
+    <br>
+    <h4>Seat Booking</h4>
+    <br>
+    <center>
+        <div id="layout" class="seatRenderDiv">
+        </div>
+        <div id="legend">
+            <div class="seat"></div> <div  class="txt">Available</div>
+            <div class="seat taken"></div> <div class="txt">Taken</div>
+            <div class="seat selected"></div> <div class="txt">Your Chosen Seats</div>
+        </div>
+        <button id="save" class="btn btn-sm btn-primary">Make Payment</button>
+    </center>
+</div>
+
+<div id="paymentSelect" style="display:none;">
+    <br>
+    <h4>Payment</h4>
+
+    <div class="form-horizontal">
+        <br>
+        <div>
+            <label class="form-label  col-md-6">Cardnumber</label>
+            <input class="form-control" type="text" name="Cardnumber" id="Cardnumber" />
+        </div>
+        <br>
+        <div>
+            <label class="form-label  col-md-6">Nameoncard</label>
+            <input class="form-control" type="text" name="Nameoncard" id="Nameoncard" />
+        </div>
+        <br>
+        <div>
+            <label class="form-label col-md-6">Expirydate</label>
+            <input class="form-control" type="date" name="Expirydate" id="Expirydate" />
+        </div>
+        <br>
+        <div>
+            <label class="form-label col-md-6">Cvv</label>
+            <input class="form-control" type="text" name="Cvv" id="Cvv" />
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label col-md-6" for="Total">Total</label>
+            <input class=" Total form-control" id="Total" readonly name="Total" type="text" value="0">
+            <br>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button id="confirmBooking" class="btn btn-success">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        initiateRenderSeatDiv();
+    });
+
+    function initiateRenderSeatDiv() {
+
+
+ 
+                $.ajax({
+            type: "get",
+                    url: 'GetSeatData',
+                    data: {
+                      
+                     Movieid: @Session["Movieid"],
+                        Screen: '@TempData["Screen"]',
+                        Moviedate: '@TempData["Moviedate"]',
+                        Movietime: '@TempData["Movietime"]',
+                    
+                    },
+                    dataType: "json",
+            success: function (response) {
+                renderSeatDiv(response);
+
+
+                    }
+
+        });
+
+
+    };
+
+    function renderSeatDiv(data) {
+        var renderDiv = $(".seatRenderDiv");
+
+        for (var i = 0; i < data.length; i++) {
+            var currentData = data[i];
+            var seat;
+            if (currentData.IsBooked === true) {
+                seat = `<div class="seat taken" onclick="addSelected(this);" style="pointer-events:none;" seat_id=${currentData.SeatID}>${currentData.SeatNo}</div>`;
+            }
+            else {
+                seat = `<div class="seat" onclick="addSelected(this);" price=@TempData["price"] seat_id=${currentData.SeatID}>${currentData.SeatNo}</div>`;
+            }
+
+            $(renderDiv).append(seat);
+
+        }
+
+    } 
+
+
+    function addSelected(thisobj) {
+
+        var seatId = $(thisobj).attr("seat_id");
+
+        var current = $("[seat_id='" + seatId + "']");
+
+        if ($(current).hasClass("selected")) {
+            $(current).removeClass("selected");
+        }
+        else {
+            $(current).addClass("selected");
+        }
+
+
+        var price = 0;
+
+        $("[seat_id].selected").each(function (idx, elem) {
+            price = price + parseFloat($(elem).attr("price"));
+        });
+        $("#Total").val(price);
+
+    };
+
+    $("#save").click(function () {
+
+        $("#seatSelect").hide();
+        $("#paymentSelect").show();
+
+
+    });
+
+    $("#confirmBooking").click(function () {
+
+        var userData = getUser();
+
+
+        console.log(userData);
+
+       // return false;
+        if (userData.PayMentDetails.Cardnumber === "") {
+            Swal.fire(
+                'Cardnumber!',
+                'Please Enter Cardnumber!',
+                'warning'
+            )
+            return false;
+        }
+        if (userData.PayMentDetails.Nameoncard === "") {
+            Swal.fire(
+                'Nameoncard!',
+                'Please Enter Nameoncard!',
+                'warning'
+            )
+            return false;
+        }
+        if (userData.PayMentDetails.Expirydate === "") {
+            Swal.fire(
+                'Expirydate!',
+                'Please Enter Expirydate!',
+                'warning'
+            )
+            return false;
+        }
+        if (userData.PayMentDetails.Cvv === "") {
+            Swal.fire(
+                'Cvv!',
+                'Please Enter Cvv!',
+                'warning'
+            )
+            return false;
+        }
+
+
+
+        $.ajax({
+            type: "POST",
+            url: 'Seatbook',
+            data: userData,
+            dataType: "json",
+            success: function (response) {
+                console.log(userData);
+
+                window.location.href = 'Ticket'
+
+
+
+            }
+    });
+
+        function getUser() {
+
+            var selectedSeatArray = [];
+
+            $("[seat_id].selected").each(function (idx, elem) {
+                    selectedSeatArray.push($(elem).attr("seat_id"));
+            });
+
+
+            var payMentDetails = {
+                Cardnumber: $("#Cardnumber").val(),
+                Nameoncard: $("#Nameoncard").val(),
+                Expirydate: $("#Expirydate").val(),
+                Cvv: $("#Cvv").val(),
+                Total: $("#Total").val()
+            };
+
+
+            return {
+
+                Screen:'@TempData["Screen"]',
+                 Moviedate:'@TempData["Moviedate"]',
+                Movietime:'@TempData["Movietime"]',
+                Movieid: @Session["Movieid"],
+                Memberid:  @Session["Memberid"],
+                Price :@TempData["price"],
+                Seatid: selectedSeatArray,
+                PayMentDetails: payMentDetails
+
+
+            }
+        }
+
+
+    });
+</script>
+
+
